@@ -44,10 +44,10 @@ else
 fi
 
 # meta server url
-config_server_url=http://localhost:28976
-admin_server_url=http://localhost:32708
+config_server_url=http://localhost:8080
+admin_server_url=http://localhost:8090
 eureka_service_url=http://localhost:8671/eureka/
-portal_url=http://localhost:49087
+portal_url=http://localhost:8070
 
 # JAVA OPTS
 BASE_JAVA_OPTS="$JAVA_OPTS -Denv=dev"
@@ -171,7 +171,7 @@ if [ "$1" = "start" ] ; then
   echo "==== starting portal ===="
   echo "Portal logging file is $PORTAL_LOG"
   export APP_NAME="apollo-portal"
-  export JAVA_OPTS="$PORTAL_JAVA_OPTS -Dlogging.file.name=./apollo-portal.log -Dserver.port=49087 -Dspring.datasource.url=$apollo_portal_db_url -Dspring.datasource.username=$apollo_portal_db_username -Dspring.datasource.password=$apollo_portal_db_password"
+  export JAVA_OPTS="$PORTAL_JAVA_OPTS -Dlogging.file.name=./apollo-portal.log -Dserver.port=8070 -Dspring.datasource.url=$apollo_portal_db_url -Dspring.datasource.username=$apollo_portal_db_username -Dspring.datasource.password=$apollo_portal_db_password"
 
   if [[ -f $PORTAL_JAR ]]; then
     rm -rf $PORTAL_JAR
