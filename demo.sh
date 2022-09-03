@@ -44,10 +44,10 @@ else
 fi
 
 # meta server url
-config_server_url=http://localhost:8080
-admin_server_url=http://localhost:8090
+config_server_url=http://localhost:28976
+admin_server_url=http://localhost:32708
 eureka_service_url=http://localhost:8671/eureka/
-portal_url=http://localhost:8070
+portal_url=http://localhost:49087
 
 # JAVA OPTS
 BASE_JAVA_OPTS="$JAVA_OPTS -Denv=dev"
